@@ -239,7 +239,7 @@ export default {
                 } else {
                     await store.addTask(payload);
                 }
-                router.push('/');
+                router.push('/home');
             } catch (error) {
                 console.error('Error updating or creating task:', error);
             }
