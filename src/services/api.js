@@ -13,7 +13,7 @@ const removeToken = () => {
 };
 
 export const apiClient = axios.create({
-    baseURL: process.env.API_URL || 'http://localhost:8000/api',
+    baseURL: 'https://task-manager-api-8umr.vercel.app/api',
     withCredentials: false,
     headers: {
         Accept: 'application/json',
