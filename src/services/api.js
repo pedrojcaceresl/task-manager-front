@@ -48,7 +48,7 @@ apiClient.interceptors.response.use(
                         // No hay refresh token, mostrar notificación y redirigir
                         store.showNotification('Session expired. Please log in again.', 'error');
                         removeToken();
-                        router.push('/login');
+                        router.push('/');
                         return Promise.reject(error);
                     }
 
@@ -63,7 +63,7 @@ apiClient.interceptors.response.use(
                     // Mostrar notificación y redirigir en caso de fallo al refrescar el token
                     store.showNotification('Session expired. Please log in again.', 'error');
                     removeToken();
-                    router.push('/login');
+                    router.push('/');
                     return Promise.reject(err);
                 }
             }

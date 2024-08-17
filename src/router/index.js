@@ -7,12 +7,12 @@ import TaskForm from '../components/TaskForm.vue';
 
 const routes = [
     {
-        path: '/login',
+        path: '/',
         name: 'Login',
         component: LoginView
     },
     {
-        path: '/',
+        path: '/home',
         name: 'Home',
         component: Home,
         meta: { requiresAuth: true },
@@ -43,7 +43,7 @@ const routes = [
         path: '/:catchAll(.*)',  // Catch-all route for unmatched paths
         redirect: to => {
             const isAuthenticated = true; // Replace with your actual authentication check
-            return isAuthenticated ? '/' : '/login'; // Redirect to home if authenticated, else login
+            return isAuthenticated ? '/home' : '/'; // Redirect to home if authenticated, else login
         }
     }
 

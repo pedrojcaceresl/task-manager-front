@@ -29,7 +29,7 @@ export default {
     const handleLogout = async () => {
       try {
         await logout(); // Call the logout function
-        router.push("/login"); // Redirect to login page
+        router.push("/"); // Redirect to login page
       } catch (error) {
         console.error('Logout error:', error);
       }

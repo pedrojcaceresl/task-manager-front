@@ -37,14 +37,14 @@ export default {
         user.value = await getCurrentUser();
       } catch (error) {
         console.error('Failed to fetch user', error);
-        router.push('/login'); // Redirect to login if fetching user fails
+        router.push('/'); // Redirect to login if fetching user fails
       }
     });
 
     const handleLogout = async () => {
       try {
         await logout();
-        router.push('/login'); // Redirect to login page after logout
+        router.push('/'); // Redirect to login page after logout
       } catch (error) {
         console.error('Logout error:', error);
       }

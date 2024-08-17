@@ -55,7 +55,7 @@ export default {
     const handleLogin = async () => {
       try {
         await store.login({ username: username.value, password: password.value });
-        router.push('/');
+        router.push('/home');
       } catch (error) {
         loginError.value = 'Invalid username or password. Please try again.'; // Set error message
         console.error('Login error:', error);
