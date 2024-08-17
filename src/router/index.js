@@ -39,6 +39,13 @@ const routes = [
             },
         ]
     },
+    {
+        path: '/:catchAll(.*)',  // Catch-all route for unmatched paths
+        redirect: to => {
+            const isAuthenticated = true; // Replace with your actual authentication check
+            return isAuthenticated ? '/' : '/login'; // Redirect to home if authenticated, else login
+        }
+    }
 
 ]
 

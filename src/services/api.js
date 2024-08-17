@@ -13,7 +13,7 @@ const removeToken = () => {
 };
 
 export const apiClient = axios.create({
-    baseURL: 'http://localhost:8000/api',
+    baseURL: process.env.API_URL || 'http://localhost:8000/api',
     withCredentials: false,
     headers: {
         Accept: 'application/json',
