@@ -246,7 +246,7 @@ export default {
         };
 
         const handleCancel = () => {
-            router.push("/");
+            router.push("/home");
         }
 
         return {
